@@ -9,16 +9,16 @@ This script renames the haplotigs identified by purge haplotigs using the nomenc
 This script makes the output of purge haplotigs compatible with [FALCON-Phase](https://github.com/PacificBiosciences/pb-falcon-phase).
 
 # Usage
-renamePurgedHaplotigs.pl curated.fasta curated.haplotigs.fasta cns_h_ctg.fasta
+`renamePurgedHaplotigs.pl curated.fasta curated.haplotigs.fasta cns_h_ctg.fasta`
 
 # Input
-curated.fasta - curated primary contigs, output from purge haplotigs
-curated.haplotigs.fasta - curated haplotigs, output from purge haplotigs, "new haplotigs"
-cns_h_ctg.fasta - original haplotigs output from FALCON-Unzip
+`curated.fasta` - curated primary contigs, output from purge haplotigs
+`curated.haplotigs.fasta` - curated haplotigs, output from purge haplotigs, "new haplotigs"
+`cns_h_ctg.fasta` - original haplotigs output from FALCON-Unzip
 
 # Output
-curated.haplotigs.renamed.fasta - curated haplotigs renamed in Unzip haplotig style (e.g. 000123F_001)
+`curated.haplotigs.renamed.fasta` - curated haplotigs renamed in Unzip haplotig style (e.g. 000123F_001)
 
 # Dependencies
-perl
-samtools
+`perl`
+`samtools`
