@@ -118,10 +118,8 @@ foreach my $p (sort keys %new_haplotigs) {
 	push(@unzip_style_id, @$ref);
 }
 
-# DEAL WITH REPEATS
 
-
-# print fasta file with original haplotigs plus renamed curated haplotigs
+# print fasta file with original haplotigs plus renamed curated haplotigs, repeats omitted
 `cp $orig_h_fasta $cur_rename_h_fasta`;
 open (RHF, '>>', $cur_rename_h_fasta) or die "Could not open file '$cur_rename_h_fasta'";
 open (CHF, $cur_h_fasta) or die "Could not open file '$cur_h_fasta'";
