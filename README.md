@@ -13,7 +13,9 @@ This script makes the output of purge haplotigs compatible with [FALCON-Phase](h
 
 # Input
 `curated.fasta` - curated primary contigs, output from purge haplotigs
+
 `curated.haplotigs.fasta` - curated haplotigs, output from purge haplotigs, "new haplotigs"
+
 `cns_h_ctg.fasta` - original haplotigs output from FALCON-Unzip
 
 # Output
@@ -21,4 +23,5 @@ This script makes the output of purge haplotigs compatible with [FALCON-Phase](h
 
 # Dependencies
 `perl`
+
 `samtools`
