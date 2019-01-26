@@ -21,6 +21,8 @@ This script makes the output of purge haplotigs compatible with [FALCON-Phase](h
 # Output
 `curated.haplotigs.renamed.fasta` - curated haplotigs renamed in Unzip haplotig style (e.g. 000123F_001)
 
+Log of original and new names plus omitted repeat contigs is printed to stdout.
+
 # Dependencies
 `perl`
 
