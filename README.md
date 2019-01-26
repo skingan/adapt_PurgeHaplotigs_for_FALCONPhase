@@ -2,7 +2,7 @@
 Convert output of purge haplotigs to format compatible with FALCON-Phase
 
 # Scope
-[Purge haplotigs](https://bitbucket.org/mroachawri/purge_haplotigs) is a method for identifying haplotigs in long read genome assemblies, such as those generated with [FALCON-Unzip](https://github.com/PacificBiosciences/pb-assembly). The method analyzes read coverage and sequence alignments to categorize primary contigs as haplotigs. Haplotytic primary contigs often occur when haplotype divergence is high (~5% or greater, depending on assembly parameters).
+[Purge haplotigs](https://bitbucket.org/mroachawri/purge_haplotigs) is a method for identifying haplotigs in PacBio genome assemblies, such as those generated with [FALCON-Unzip](https://github.com/PacificBiosciences/pb-assembly). The method analyzes read coverage and sequence alignments to categorize primary contigs as haplotigs. Haplotytic primary contigs often occur when haplotype divergence is high (~5% or greater, depending on assembly parameters).
 
 This script renames the haplotigs identified by purge haplotigs using the nomenclature of FALCON-Unzip. Repeat contigs are discarded.
 
