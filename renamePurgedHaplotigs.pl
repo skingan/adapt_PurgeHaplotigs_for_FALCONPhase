@@ -40,7 +40,6 @@ my $orig_h_fai = $orig_h_fasta.".fai";
 ####################
 my $cur_rename_h_fasta = "curated.haplotigs.renamed.fasta";
 
-
 # index fasta files if .fai files don't exist
 unless (-e $orig_h_fasta.".fai") {
 	`samtools faidx $orig_h_fasta`;
@@ -55,6 +54,7 @@ open (OGH, $orig_h_fai) or die "Could not open file '$cur_h_fai'";
 while (my $line = <OGH>) {
 	chomp $line;
 	my @line_array = split("\t", $line);
+	$line_array[0] =~ s/\|arrow//g; # strip arrow suffix
 	push @orig_haplotigs, $line_array[0]; 
 }
 my @s = split("_", $orig_haplotigs[0]);
@@ -120,7 +120,7 @@ foreach my $p (sort keys %new_haplotigs) {
 
 
 # print fasta file with original haplotigs plus renamed curated haplotigs, repeats omitted
-`cp $orig_h_fasta $cur_rename_h_fasta`;
+`cat $orig_h_fasta | sed 's/|arrow//g' > $cur_rename_h_fasta`;
 open (RHF, '>>', $cur_rename_h_fasta) or die "Could not open file '$cur_rename_h_fasta'";
 open (CHF, $cur_h_fasta) or die "Could not open file '$cur_h_fasta'";
 my $repeat = 0;
